@@ -1,13 +1,13 @@
 import axios from "axios";
 
-alert(process.env.NODE_ENV);
+// alert(process.env.NODE_ENV);
 
 const myAxios = axios.create({
   // 区分开发和线上环境
   baseURL:
     process.env.NODE_ENV === "development"
       ? "http://localhost:8080"
-      : "https://codefather.cn",
+      : "http://119.29.173.96:8080", // 改为自己的后端部署IP地址
   timeout: 10000,
   withCredentials: true,
 });
